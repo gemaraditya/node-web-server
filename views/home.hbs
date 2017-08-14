@@ -6,8 +6,9 @@
     </head>
 
     <body>
-        <h1> This is dynamic {{pageTitle}} </h1>
-        <p> Helllooo and {{screamIt welcomeMessage}}</p>
+        {{> header}}
+        
+        <p> Helllooo and {{screamIt welcomeMessage}} </p>
 
         {{> footer}}
     </body>

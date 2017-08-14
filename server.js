@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 //heroku port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 800;
 
 var app = express();
 
@@ -62,6 +62,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects page',
+    });
+});
+
 app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+    console.log(`listening on port ${port} `);
+    console.log(process.env.PORT);
 });
